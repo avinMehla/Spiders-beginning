@@ -1,0 +1,155 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+/*    background: url('background.png') no-repeat center center/cover; /* Replace with your background image */
+    scroll-snap-type: y mandatory;
+    overflow-x: hidden;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    padding: 20px;
+    scroll-snap-align: start;
+    background: rgba(0, 0, 0, 0.8); /* Dark overlay for readability */
+}
+
+/* About Section */
+.about {background: url('background.png') no-repeat center center/cover;
+}
+
+.about h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #e2e8f0;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.about p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    color: #cbd5e1;
+}
+
+/* Team Member Section */
+.member .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 600px;
+}
+
+.member .content:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.7);
+}
+
+/* Photo on the Left */
+.member .left img {
+    width: 400px;
+    height: 400px; /* Square photo */
+    border-radius: 10px; /* Slightly rounded corners for a modern look */
+    border: 5px solid #ffdd00;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+}
+.memberImg{
+    width: 350px;
+    height: 350px;
+}
+
+/* Details on the Right */
+.member .right {
+    flex: 1;
+    margin-left: 30px;
+    text-align: left;
+}
+
+.member h2 {
+    font-size: 2.5rem;
+    color: #e9d8fd;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.member p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #e2e8f0;
+}
+
+/* Icons */
+.member .icons {
+    margin-top: 15px;
+}
+.icons{
+display: flex;
+justify-content: left;
+align-items: center;
+}
+.logoImg {
+height: 60px;
+width: 60px;
+}
+
+.member .icons i {
+    font-size: 1.8rem;
+    color: #ffdd00;
+    margin-right: 10px;
+    transition: transform 0.3s, color 0.3s;
+
+}
+
+.member .icons i:hover {
+    transform: scale(1.2);
+    color: #ff7700;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #1e293b, #3b82f6);
+    font-size: 1rem;
+    color: #cbd5e1;
+    box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .member .content {
+        flex-direction: column; /* Stacks the photo and details vertically on smaller screens */
+        text-align: center;
+    }
+    .member .right {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .member .left img {
+        width: 150px;
+        height: 150px;
+    }
+    h1, h2 {
+        font-size: 1.8rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+}
